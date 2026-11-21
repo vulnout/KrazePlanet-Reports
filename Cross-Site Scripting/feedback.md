@@ -33,6 +33,6 @@ An attacker can craft a malicious URL containing the payload and trick a victim 
 
 
 ## Remediation
-* **Context-Aware Output Encoding:** Encode all user-supplied input from the `q` parameter using HTML and attribute entity encoding (e.g., converting `<` to `&lt;`, `>` to `&gt;`, `"` to `&quot;`, and `'` to `&#x27;`) before rendering it in the response.
+* **Context-Aware Output Encoding:** Encode all user-supplied input from the `fname` and `lname` parameter using HTML and attribute entity encoding (e.g., converting `<` to `&lt;`, `>` to `&gt;`, `"` to `&quot;`, and `'` to `&#x27;`) before rendering it in the response.
 * **Avoid Blacklist-Based Filtering:** Do not rely on case-sensitive keyword blacklists or regex stripping (such as blocking `<script>`) as a primary defense against XSS, as attackers can easily bypass them using mixed casing or alternative event handlers.
 * **Implement Content Security Policy (CSP):** Configure a strict `Content-Security-Policy` HTTP response header to restrict inline script execution and mitigate the impact of XSS.
