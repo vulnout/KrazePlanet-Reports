@@ -1,5 +1,5 @@
 ## Title
-Reflected XSS - TutorialRepublic: Web Development Reference Search
+Reflected XSS - GIGW: Government Website Guidelines Portal
 <!-- Write a short, clear title describing the vulnerability and where it was found. Example: Stored XSS in User Profile -->
 
 ## Description
