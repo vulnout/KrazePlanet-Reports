@@ -7,6 +7,8 @@ Reflected XSS - TutorialRepublic: Web Development Reference Search
 
 **Vulnerability:** Reflected Cross-Site Scripting (XSS)
 
+**Affected parameter:** `q`
+
 There is a presence of a Reflected Cross-Site Scripting (XSS) vulnerability in the `q` parameter of the web application's search functionality.User-supplied input passed through the `q` query parameter is reflected directly into the HTTP response without proper HTML encoding or sanitization, allowing an attacker to execute arbitrary JavaScript in the context of a victim's browser session.
 ## Steps to Reproduce
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
@@ -14,8 +16,14 @@ There is a presence of a Reflected Cross-Site Scripting (XSS) vulnerability in t
 2. The JavaScript payload executes and an alert `1` can be seen, confirming reflected XSS execution.
 ## POC (Proof of Concept)
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
+**1. Visit `https://tutorialrepublic.pwnedbox.site` and enter payload**
+   
 <img width="1598" height="822" alt="image" src="https://github.com/user-attachments/assets/b9983274-79f5-4ab3-afe8-fed7a26068d9" />
+
+**2. Arbitrary JavaScript execution triggered**
+   
 <img width="1600" height="818" alt="image" src="https://github.com/user-attachments/assets/59ab8d60-9202-4967-9073-5e2183b24f4b" />
+
 
 ## Impact
 <!-- Explain what an attacker could achieve, who could be affected, and the realistic security consequences. -->
