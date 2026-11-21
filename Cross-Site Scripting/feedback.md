@@ -4,6 +4,7 @@ Reflected XSS - Script Tag Filter Evasion
 
 ## Description
 **Affected URL:** https://feedback.pwnedbox.site/
+
 **Affected Parameter(s):**  `fname` and `lname`
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 A Reflected Cross-Site Scripting (XSS) vulnerability exists in the `fname` and `lname` parameter of the web application. While the application implements a case-sensitive filter that blocks standard lowercase `<script>` tags, it fails to properly encode user-supplied input. An attacker can bypass this restriction using mixed-case tag obfuscation (`<sCript>`) to execute arbitrary JavaScript in the context of a victim's browser session.
