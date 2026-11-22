@@ -9,7 +9,7 @@ Reflected XSS - Extended Function Filter
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 A **Reflected Cross-Site Scripting (XSS)** vulnerability exists in the `lname` parameter of the web application. While the application implements a keyword filter that blocks explicit references to common XSS functions such as `alert()` and filters out `<script>`, it fails to properly sanitize or HTML-encode user-supplied input. 
 
-An attacker can bypass this blacklist using JavaScript string concatenation inside `eval()` (e.g., `eval("a"+"lert(1)")`) and mixed-case tag obfuscation (`<sCript>`) to dynamically construct and execute arbitrary JavaScript in the context of a victim's browser session.Though, it is observed that the parameter `fname` successfully filters such attempts.
+An attacker can bypass this blacklist using JavaScript string concatenation inside `eval()` (e.g., `eval("a"+"lert(2)")`) and mixed-case tag obfuscation (`<sCript>`) to dynamically construct and execute arbitrary JavaScript in the context of a victim's browser session.Though, it is observed that the parameter `fname` successfully filters such attempts.
 
 ## Steps to Reproduce
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
