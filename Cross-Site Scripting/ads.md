@@ -14,6 +14,12 @@ A **Stored Cross-Site Scripting (XSS)** vulnerability exists in the **Report Nam
 
 As noted on the dashboard (*"All network reports — visible to every authenticated user"*), any authenticated user or administrator who views the **Network Reports** page will automatically execute the attacker's arbitrary JavaScript in their browser session.
 
+# Steps to Reproduce
+1. Create an account and log in at `https://ads.pwnedbox.site`.
+2. Click **New Network Report** to open the report creation modal.
+3. Enter `'">abmi5<img src=O onError=alert(1)>` into the **Report Name** field and fill in the remaining fields with valid values.
+4. Click **Run & Save Report** and observe that `alert(1)` executes automatically upon saving and rendering the report in the **Network Reports** table.
+
 ## POC (Proof of Concept)
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
 **1.Create account**
